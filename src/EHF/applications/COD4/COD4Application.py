@@ -11,13 +11,13 @@ logger = logging.getLogger(__name__)
 class Cod4Application(d3dapplication.D3DApplication):
     
     pluginDefinitions = [
-                         #("EHF.applications.COD4.plugins.memory", "COD4ScannerPlugin"),
-                         #("EHF.applications.COD4.plugins.memory", "COD4MemReaderPlugin"),
+                         ("EHF.applications.COD4.plugins.memory", "COD4ScannerPlugin"),
+                         ("EHF.applications.COD4.plugins.memory", "COD4MemReaderPlugin"),
                          #("EHF.applications.plugins.keymouseinput", "KeyMouseInputPlugin"),
                          #("EHF.applications.plugins.keymouseinput", "SimpleMouseMovePlugin"),
-                         #("EHF.plugins.common.drawing", "SimpleCrosshairPlugin"),
-                         #("EHF.plugins.common.drawing", "SimpleTextPlugin"),
-                         #("EHF.applications.COD4.plugins.esp", "EspPlugin")
+                         ("EHF.plugins.common.drawing", "SimpleCrosshairPlugin"),
+                         ("EHF.plugins.common.drawing", "SimpleTextPlugin"),
+                         ("EHF.applications.COD4.plugins.esp", "EspPlugin")
                         ]
     
     def _initAppInfo(self):
