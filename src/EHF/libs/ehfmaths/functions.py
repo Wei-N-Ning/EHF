@@ -98,46 +98,6 @@ def getViewMatrix(up, right, forward, position):
 
     return mat
 
-
-def old_worldToScreenMatrix(worldMatrix, position, scrCenterX, scrCenterY):
-    """
-    BOOL worldToScreen(D3DXVECTOR3* in, D3DXVECTOR3* out)
-    {
-        const D3DXMATRIX & m_Screen = *( D3DXMATRIX * )&WORLDRENDER->m_render->WorldTransform;
-        D3DXVECTOR3 vOrigin = ( *in );
-        FLOAT screenX = static_cast< FLOAT >( ScreenWidth ) / 2.0f;
-        FLOAT screenY = static_cast< FLOAT >( ScreenHeight ) / 2.0f;
-        FLOAT w = m_Screen.m [0][3] * vOrigin.x +
-            m_Screen.m [1][3] * vOrigin.y +
-            m_Screen.m [2][3] * vOrigin.z +
-            m_Screen.m [3][3];
-        if( w < 0.0001f )
-            return FALSE;
-        FLOAT x =   m_Screen.m [0][0] * vOrigin.x +
-            m_Screen.m [1][0] * vOrigin.y +
-            m_Screen.m [2][0] * vOrigin.z +
-            m_Screen.m [3][0]; 
-        FLOAT y =   m_Screen.m [0][1] * vOrigin.x +
-            m_Screen.m [1][1] * vOrigin.y +
-            m_Screen.m [2][1] * vOrigin.z +
-            m_Screen.m [3][1]; 
-        out->x = screenX + screenX * x / w;
-        out->y = screenY - screenY * y / w;
-        return TRUE;
-    }
-    """
-    _w = worldMatrix.getM(0,3) * position.x + worldMatrix.getM(1,3) * position.y + worldMatrix.getM(2,3) * position.z + worldMatrix.getM(3,3)
-    if _w < 0.1:
-        return None
-    _x = worldMatrix.getM(0,0) * position.x + worldMatrix.getM(1,0) * position.y + worldMatrix.getM(2,0) * position.z + worldMatrix.getM(3,0)
-    _y = worldMatrix.getM(0,1) * position.x + worldMatrix.getM(1,1) * position.y + worldMatrix.getM(2,1) * position.z + worldMatrix.getM(3,1)
-    
-    x = scrCenterX + scrCenterX * _x / _w
-    y = scrCenterY + scrCenterY * _y / _w
-    
-    return COORD(x, y)
-
-
 def worldToScreenMatrix(vProjMatrix, position, scrCenterX, scrCenterY):
     _position = SimpleMatrix()
     _position.setM(0,0,position.x)

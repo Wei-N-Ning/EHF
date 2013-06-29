@@ -1,3 +1,5 @@
+import math
+
 from EHF.libs import ehfgraphics
 from EHF.plugins import base
 from EHF.applications.BF3 import datastruct
@@ -86,13 +88,27 @@ class EspPlugin(base.BasePerFrameDrawingPlugin):
             _color = self.colorTeammate if player.teamId == self.appVars["localPlayerTeamId"] \
                                         else self.colorEnemy
             pos4 = player.position.toPointVector4()
-            distant = (pos4 - viewOrigin)._length()
+            pos4TankAimAssist = player.position.toPointVector4()
             
+            distant = (pos4 - viewOrigin)._length()
             deltaY = pos4.y - viewOrigin.y
             
             _posV = pos4.multToMat(worldTransform).multToMat(viewTransform)
             _posVP = _posV.multToMat(projectionTransform)
-            _posV.x = _posV.x * -1
+            _posV.x *= -1
+            
+            # get bullet drop
+            try:
+                sinAimA = deltaY/distant
+            except:
+                continue
+            bulletTravelTime = distant/200.0
+            bulletTravelDistanceY = 200.0 * sinAimA * bulletTravelTime - 4.905 * bulletTravelTime**2
+            aimCompensationY = deltaY - bulletTravelDistanceY
+            
+            pos4TankAimAssist.y += aimCompensationY 
+            posVTankAimAssist = pos4TankAimAssist.multToMat(worldTransform).multToMat(viewTransform)
+            posVTankAimAssist = posVTankAimAssist.multToMat(projectionTransform)
             
             self.miniMap.drawPlayer(self.getLine(), _posV, player.teamId == self.appVars["localPlayerTeamId"])
 
@@ -103,12 +119,9 @@ class EspPlugin(base.BasePerFrameDrawingPlugin):
             x = self.screenCenterX*(1+_posVP.x/_posVP.w)
             y = self.screenCenterY*(1+_posVP.y/_posVP.w)
             
-            # ---------- draw a spot for each player -----------
-#            ehfgraphics.drawSpot(self.getLine(),
-#                                 x,
-#                                 y, 
-#                                 _color,
-#                                 size=3)
+            xAim = self.screenCenterX*(1+posVTankAimAssist.x/posVTankAimAssist.w)
+            yAim = self.screenCenterY*(1+posVTankAimAssist.y/posVTankAimAssist.w)
+            
             
             # ---------- draw player distance hint text ---------
             if player.teamId != self.appVars["localPlayerTeamId"]:
@@ -119,7 +132,14 @@ class EspPlugin(base.BasePerFrameDrawingPlugin):
                                            40, 
                                            _color, 
                                            "%0.1f" % distant)
-            
+
+            # ---------- draw a spot for tank aim assist -----------
+                ehfgraphics.drawSpot(self.getLine(),
+                                     xAim,
+                                     yAim, 
+                                     _color,
+                                     size=1.5)
+
             # ---------- draw boxed esp -------------
             _width, _height = self.getWidthHeight(distant)
             if player.poseType:
@@ -134,10 +154,11 @@ class EspPlugin(base.BasePerFrameDrawingPlugin):
                                 _color)
             
             # --------- draw tank aim hint -------------
-            if almostFEq( self.appVars["fov_y"], 0.349065870047, 4 ):
-                self.drawTankAimHint3x(distant, hintColor, x, y, _height, deltaY)
-            elif almostFEq( self.appVars["fov_y"], 0.872664630413, 4 ):
-                self.drawTankAimHint1x(distant, hintColor, x, y, _height, deltaY)
+            # DEPRECATED!!
+#            if almostFEq( self.appVars["fov_y"], 0.349065870047, 4 ):
+#                self.drawTankAimHint3x(distant, hintColor, x, y, _height, deltaY)
+#            elif almostFEq( self.appVars["fov_y"], 0.872664630413, 4 ):
+#                self.drawTankAimHint1x(distant, hintColor, x, y, _height, deltaY)
             
 
     def drawTankAimHint3x(self, distant=0.0, hintColor=0x0, x=0.0, y=0.0, _height=0.0, deltaY=0.0):
@@ -176,7 +197,7 @@ class EspPlugin(base.BasePerFrameDrawingPlugin):
             return
         elif distant >=50.0 and distant <= 400:
             hintHeight = y+_height-(distant-50.0)/350.0*26
-            return
+            #return
         elif distant > 400 and distant <= 500:
             hintHeight = y+_height-(distant-400.0)/100.0*12-26
         elif distant > 500 and distant <= 600:
