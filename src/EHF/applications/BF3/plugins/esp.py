@@ -102,8 +102,9 @@ class EspPlugin(base.BasePerFrameDrawingPlugin):
                 sinAimA = deltaY/distant
             except:
                 continue
+            #TODO: expose this parameter
             bulletTravelTime = distant/200.0
-            bulletTravelDistanceY = 200.0 * sinAimA * bulletTravelTime - 4.905 * bulletTravelTime**2
+            bulletTravelDistanceY = 200.0 * sinAimA * bulletTravelTime - 9.810/2.0 * bulletTravelTime**2
             aimCompensationY = deltaY - bulletTravelDistanceY
             
             pos4TankAimAssist.y += aimCompensationY 
@@ -139,7 +140,9 @@ class EspPlugin(base.BasePerFrameDrawingPlugin):
                                      yAim, 
                                      _color,
                                      size=1.5)
-
+                
+                ehfgraphics.drawLine(self.getLine(), x , y, xAim-x, yAim-y, 0.5, color=_color)
+                
             # ---------- draw boxed esp -------------
             _width, _height = self.getWidthHeight(distant)
             if player.poseType:
