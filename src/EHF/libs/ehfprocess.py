@@ -41,13 +41,23 @@ class ProcessHelper(object):
         Note that this method relies on psutil, which does not provide a way
         to directly access to the window thread
         
-        * It's suggested to use findWindowByClass() method for all the window-related
+        @note: 
+        It's suggested to use findWindowByClass() method for all the window-related
         access.
         
-        return process id
+        @note:
+        Do not run this function frequently
+        
+        @return: process id
+        @rtype : int
         """
         for _process in psutil.process_iter():
-            if _process.name == processName:
+            # to avoid the permission error
+            try:
+                pName = _process.name
+            except psutil.AccessDenied:
+                pName = ''
+            if pName == processName:
                 self.pid = _process.pid # cache the result
                 self.process = _process
                 logger.debug(" + Found process %d by name [%s]" % (self.pid, processName))

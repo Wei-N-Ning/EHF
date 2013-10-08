@@ -1,0 +1,799 @@
+Vehicles attached entry id's
+
+AC-130
+main gunner
+18:26:41   stance    0		 0x00000000 
+18:26:41  nr of weaponstates  0
+18:26:41  gravity  0.00
+18:26:41  bulletspeed  600.00
+18:26:41  nr of weaponstates  1
+18:26:41  gravity  0.00
+18:26:41  bulletspeed  900.00
+18:26:41  nr of weaponstates  2
+18:26:41  gravity  0.00
+18:26:41  bulletspeed  1.00
+18:26:41  nr of weaponstates  3
+18:26:41  gravity  0.00
+18:26:41  bulletspeed  1.00
+18:26:41    XP3
+18:26:41  m_attachedEntryId    1		 0x00000001 
+18:26:41  m_controlledEntryId  1		 0x00000001 
+second gunner
+18:26:40  m_attachedEntryId    2		 0x00000002 
+18:26:40  m_controlledEntryId  2		 0x00000002 
+18:26:40   stance    0		 0x00000000 
+18:26:40  nr of weaponstates  0
+18:26:40  gravity  0.00
+18:26:40  bulletspeed  250.00
+18:26:40  nr of weaponstates  1
+18:26:40  gravity  0.00
+18:26:40  bulletspeed  900.00
+18:26:40  nr of weaponstates  2
+18:26:40  gravity  0.00
+18:26:40  bulletspeed  1.00
+18:26:40  nr of weaponstates  3
+18:26:40  gravity  0.00
+18:26:40  bulletspeed  1.00
+18:26:40    XP3
+
+Quad
+18:29:02    XP3
+18:29:02   stance    0		 0x00000000 
+18:29:02  nr of weaponstates  0
+18:29:02  gravity  0.00
+18:29:02  bulletspeed  1.00
+18:29:02    XP3
+18:29:02   stance    0		 0x00000000 
+18:29:02    XP3
+18:29:02  m_attachedEntryId    1		 0x00000001 
+18:29:02   stance    0		 0x00000000 
+18:29:02    XP3
+
+
+armored kill m1128
+18:07:33   stance    0		 0x00000000 
+18:07:33  nr of weaponstates  0
+18:07:33  gravity  -7.00
+18:07:33  bulletspeed  0.00
+18:07:33  nr of weaponstates  1
+18:07:33  gravity  -4.91
+18:07:33  bulletspeed  200.00
+18:07:33  nr of weaponstates  2
+18:07:33  gravity  0.00
+18:07:33  bulletspeed  20.00
+18:07:33  nr of weaponstates  3
+18:07:33  gravity  -9.81
+18:07:33  bulletspeed  610.00
+18:07:33  nr of weaponstates  4
+18:07:33  gravity  -9.81
+18:07:33  bulletspeed  450.00
+18:07:33  nr of weaponstates  5
+18:07:33  gravity  0.00
+18:07:33  bulletspeed  200.00
+18:07:33  nr of weaponstates  6
+18:07:33  gravity  -8.00
+18:07:33  bulletspeed  200.00
+18:07:33  nr of weaponstates  7
+18:07:33  gravity  -7.00
+18:07:33  bulletspeed  0.10
+18:07:33    XP3
+all active up to 2-4
+18:07:37  m_attachedEntryId    4		 0x00000004 
+18:07:37  m_controlledEntryId  4		 0x00000004 
+
+SPRUT SD
+[censored]18:12:42  stance    0		 0x00000000 
+18:12:42  nr of weaponstates  0
+18:12:42  gravity  -4.91
+18:12:42  bulletspeed  200.00
+18:12:42  nr of weaponstates  1
+18:12:42  gravity  0.00
+18:12:42  bulletspeed  20.00
+18:12:42  nr of weaponstates  2
+18:12:42  gravity  -9.81
+18:12:42  bulletspeed  610.00
+18:12:42  nr of weaponstates  3
+18:12:42  gravity  -9.81
+18:12:42  bulletspeed  450.00
+18:12:42  nr of weaponstates  4
+18:12:42  gravity  0.00
+18:12:42  bulletspeed  200.00
+18:12:42  nr of weaponstates  5
+18:12:42  gravity  -8.00
+18:12:42  bulletspeed  200.00
+18:12:42  nr of weaponstates  6
+18:12:42  gravity  -7.00
+18:12:42  bulletspeed  0.00
+18:12:42  nr of weaponstates  7
+18:12:42  gravity  -7.00
+18:12:42  bulletspeed  0.10
+18:12:42    XP3
+passenger attached id 1-4
+18:12:46  m_attachedEntryId    1-4		 0x00000001 
+18:12:46  m_controlledEntryId  1-4		 0x00000001 
+18:12:46   stance    0		 0x00000000 
+18:12:46  nr of weaponstates  0
+18:12:46  gravity  -9.81
+18:12:46  bulletspeed  610.00
+
+tank 
+driver
+18:08:51    M1A2
+18:08:51   stance    0		 0x00000000 
+18:08:51  nr of weaponstates  0
+18:08:51  gravity  -9.81
+18:08:51  bulletspeed  610.00
+18:08:51  nr of weaponstates  1
+18:08:51  gravity  -9.81
+18:08:51  bulletspeed  200.00
+18:08:51  nr of weaponstates  2
+18:08:51  gravity  -9.81
+18:08:51  bulletspeed  450.00
+18:08:51  nr of weaponstates  3
+18:08:51  gravity  0.00
+18:08:51  bulletspeed  200.00
+18:08:51  nr of weaponstates  4
+18:08:51  gravity  -9.81
+18:08:51  bulletspeed  750.00
+18:08:51  nr of weaponstates  5
+18:08:51  gravity  -7.00
+18:08:51  bulletspeed  0.00
+18:08:51    M1A2
+gunner
+18:08:51  m_attachedEntryId    1		 0x00000001 
+18:08:51  m_controlledEntryId  1		 0x00000001 
+18:08:51   stance    0		 0x00000000 
+18:08:51  nr of weaponstates  0
+18:08:51  gravity  -9.81
+18:08:51  bulletspeed  600.00
+18:08:51    M1A2
+
+attachid 02 laser pointer man
+18:04:46  m_attachedEntryId    2		 0x00000002 
+18:04:46  m_controlledEntryId  2		 0x00000002 
+18:04:46   stance    0		 0x00000000 
+18:04:46  nr of weaponstates  0
+18:04:46  gravity  0.00
+18:04:46  bulletspeed  350.00
+18:04:46    M1A2
+
+t90
+18:10:59   stance    0		 0x00000000 
+18:10:59  nr of weaponstates  0
+18:10:59  gravity  -9.81
+18:10:59  bulletspeed  610.00
+18:10:59  nr of weaponstates  1
+18:10:59  gravity  -9.81
+18:10:59  bulletspeed  750.00
+18:10:59  nr of weaponstates  2
+18:10:59  gravity  -9.81
+18:10:59  bulletspeed  450.00
+18:10:59  nr of weaponstates  3
+18:10:59  gravity  0.00
+18:10:59  bulletspeed  200.00
+18:10:59  nr of weaponstates  4
+18:10:59  gravity  -9.81
+18:10:59  bulletspeed  200.00
+18:10:59  nr of weaponstates  5
+18:10:59  gravity  -7.00
+18:10:59  bulletspeed  0.00
+18:10:59    T90
+gunner
+18:11:01    T90
+18:11:01   stance    0		 0x00000000 
+18:11:01  nr of weaponstates  0
+18:11:01  gravity  -9.81
+18:11:01  bulletspeed  600.00
+laser man
+18:12:06    T90
+18:12:06  m_attachedEntryId    2		 0x00000002 
+18:12:06  m_controlledEntryId  2		 0x00000002 
+18:12:06   stance    0		 0x00000000 
+18:12:06  nr of weaponstates  0
+18:12:06  gravity  0.00
+18:12:06  bulletspeed  350.00
+18:12:06    T90
+
+
+ka-60 venom
+pilot
+06:12:11   Venom
+06:12:11  nr of projectilestates  0
+06:12:11  gravity  0.00
+06:12:11  bulletspeed  8.00
+06:12:11  nr of projectilestates  1
+06:12:11  gravity  0.00
+06:12:11  bulletspeed  8.00
+06:12:11  nr of projectilestates  2
+06:12:11  gravity  -7.00
+06:12:11  bulletspeed  0.10
+attachid 1 right gunner
+06:12:12    Venom
+06:12:12  m_attachedEntryId    1		 0x00000001 
+06:12:12  m_controlledEntryId  1		 0x00000001 
+06:12:12  nr of projectilestates  0
+06:12:12  gravity  0.00
+06:12:12  bulletspeed  900.00
+attachid 2 left gunner
+06:12:13    Venom
+06:12:13  m_attachedEntryId    2		 0x00000002 
+06:12:13  m_controlledEntryId  2		 0x00000002 
+06:12:13  nr of projectilestates  0
+06:12:13  gravity  0.00
+06:12:13  bulletspeed  900.00
+attachid 3 left seat no weapon
+06:12:13  m_attachedEntryId    3		 0x00000003
+06:12:13  m_controlledEntryId  3		 0x00000003 
+attachid 4 right seat no weapon
+06:12:13  m_attachedEntryId    4		 0x00000004 
+06:12:13  m_controlledEntryId  4		 0x00000004 
+
+AH6 && Z11W
+11:39:49  nr of projectilestates  0
+11:39:49  gravity  0.00
+11:39:49  bulletspeed  900.00
+11:39:49  nr of projectilestates  1
+11:39:49  gravity  0.00
+11:39:49  bulletspeed  50.00
+11:39:49  nr of projectilestates  2
+11:39:49  gravity  0.00
+11:39:49  bulletspeed  50.00
+11:39:49  nr of projectilestates  3
+11:39:49  gravity  0.00
+11:39:49  bulletspeed  16.00
+11:39:49  nr of projectilestates  4
+11:39:49  gravity  -7.00
+11:39:49  bulletspeed  0.10
+11:39:49  nr of projectilestates  5
+11:39:49  gravity  0.00
+11:39:49  bulletspeed  8.00
+11:39:49  nr of projectilestates  6
+11:39:49  gravity  0.00
+11:39:49  bulletspeed  8.00
+11:39:49  nr of projectilestates  7
+11:39:49  gravity  -7.00
+11:39:49  bulletspeed  0.10
+11:39:52  m_attachedEntryId    1		 0x00000001 
+11:39:52  m_attachedEntryId    2		 0x00000002 
+11:39:53  m_attachedEntryId    3		 0x00000003 
+11:39:53  m_controlledEntryId  3		 0x00000003 
+11:39:53  nr of projectilestates  0
+11:39:53  gravity  0.00
+11:39:53  bulletspeed  350.00
+
+AH1Z Mi28
+pilot
+
+06:11:52  nr of projectilestates  0
+06:11:52  gravity  0.00
+06:11:52  bulletspeed  300.00
+06:11:52  nr of projectilestates  1
+06:11:52  gravity  0.00
+06:11:52  bulletspeed  300.00
+06:11:52  nr of projectilestates  2
+06:11:52  gravity  0.00
+06:11:52  bulletspeed  50.00
+06:11:52  nr of projectilestates  3
+06:11:52  gravity  0.00
+06:11:52  bulletspeed  50.00
+06:11:52  nr of projectilestates  4
+06:11:52  gravity  0.00
+06:11:52  bulletspeed  350.00
+06:11:52  nr of projectilestates  5
+06:11:52  gravity  0.00
+06:11:52  bulletspeed  8.00
+06:11:52  nr of projectilestates  6
+06:11:52  gravity  0.00
+06:11:52  bulletspeed  8.00
+06:11:52  nr of projectilestates  7
+06:11:52  gravity  -7.00
+06:11:52  bulletspeed  0.10
+06:11:52  nr of projectilestates  8
+06:11:52  gravity  -7.00
+06:11:52  bulletspeed  0.10
+06:11:52    AH1Z
+attachid 1 gunner
+06:11:54  m_attachedEntryId    1		 0x00000001 
+06:11:54  m_controlledEntryId  1		 0x00000001 
+06:11:54  nr of projectilestates  0
+06:11:54  gravity  0.00
+06:11:54  bulletspeed  90.00
+06:11:54  nr of projectilestates  1
+06:11:54  gravity  0.00
+06:11:54  bulletspeed  600.00
+06:11:54  nr of projectilestates  2
+06:11:54  gravity  0.00
+06:11:54  bulletspeed  1.00
+06:11:54  nr of projectilestates  3
+06:11:54  gravity  0.00
+06:11:54  bulletspeed  1.00
+06:11:54  nr of projectilestates  4
+06:11:54  gravity  0.00
+06:11:54  bulletspeed  16.00
+06:11:54    AH1Z
+
+Jets SU-35BM-E and f35b f18f
+06:12:01  nr of projectilestates  0
+06:12:01  gravity  0.00
+06:12:01  bulletspeed  900.00
+06:12:01  nr of projectilestates  1
+06:12:01  gravity  0.00
+06:12:01  bulletspeed  300.00
+06:12:01  nr of projectilestates  2
+06:12:01  gravity  0.00
+06:12:01  bulletspeed  50.00
+06:12:01  nr of projectilestates  3
+06:12:01  gravity  0.00
+06:12:01  bulletspeed  50.00
+06:12:01  nr of projectilestates  4
+06:12:01  gravity  0.00
+06:12:01  bulletspeed  50.00
+06:12:01  nr of projectilestates  5
+06:12:01  gravity  0.00
+06:12:01  bulletspeed  5.00
+06:12:01  nr of projectilestates  6
+06:12:01  gravity  0.00
+06:12:01  bulletspeed  10.00
+06:12:01  nr of projectilestates  7
+06:12:01  gravity  -7.00
+06:12:01  bulletspeed  0.10
+06:12:01  nr of projectilestates  8
+06:12:01  gravity  -7.00
+06:12:01  bulletspeed  0.10
+
+GrowlerITV , DPV(XPack01)
+ driver
+12:03:22  nr of projectilestates  0
+12:03:22  gravity  0.00
+12:03:22  bulletspeed  1.00
+attachid 1 gunner
+11:54:09    GrowlerITV
+11:54:09  m_attachedEntryId    1		 0x00000001 
+11:54:09  m_controlledEntryId  1		 0x00000001 
+11:54:09  nr of projectilestates  0
+11:54:09  gravity  -15.00
+11:54:09  bulletspeed  600.00
+attachid 2 passenger seat no weapon
+
+
+VDV_Buggy
+attachid 1 gunner
+11:52:23    VDV_Buggy
+11:52:23  m_attachedEntryId    1		 0x00000001 
+11:52:23  m_controlledEntryId  1		 0x00000001 
+11:52:23  nr of projectilestates  0
+11:52:23  gravity  -9.81
+11:52:23  bulletspeed  600.00
+attachid 2 passenger seat no weapon
+
+
+LAV25
+18:20:20    LAV25
+18:20:20   stance    0		 0x00000000 
+18:20:20  nr of weaponstates  0
+18:20:20  gravity  0.00
+18:20:20  bulletspeed  50.00
+18:20:20  nr of weaponstates  1
+18:20:20  gravity  0.00
+18:20:20  bulletspeed  50.00
+18:20:20  nr of weaponstates  2
+18:20:20  gravity  0.00
+18:20:20  bulletspeed  900.00
+18:20:20  nr of weaponstates  3
+18:20:20  gravity  -7.00
+18:20:20  bulletspeed  0.00
+18:20:20    LAV25
+
+
+9K22_Tunguska_M
+18:21:15    9K22_Tunguska_M
+18:21:15   stance    0		 0x00000000 
+18:21:15  nr of weaponstates  0
+18:21:15  gravity  0.00
+18:21:15  bulletspeed  900.00
+18:21:15  nr of weaponstates  1
+18:21:15  gravity  0.00
+18:21:15  bulletspeed  50.00
+18:21:15  nr of weaponstates  2
+18:21:15  gravity  0.00
+18:21:15  bulletspeed  50.00
+18:21:15  nr of weaponstates  3
+18:21:15  gravity  -7.00
+18:21:15  bulletspeed  0.00
+18:21:15    9K22_Tunguska_M
+
+
+LAV25 as infrantry vehicle & BTR-90 
+driver
+06:03:58    LAV25
+06:12:55  nr of projectilestates  0
+06:12:55  gravity  -4.91
+06:12:55  bulletspeed  200.00
+06:12:55  nr of projectilestates  1
+06:12:55  gravity  -4.91
+06:12:55  bulletspeed  200.00
+06:12:55  nr of projectilestates  2
+06:12:55  gravity  -9.81
+06:12:55  bulletspeed  610.00
+06:12:55  nr of projectilestates  3
+06:12:55  gravity  0.00
+06:12:55  bulletspeed  16.00
+06:12:55  nr of projectilestates  4
+06:12:55  gravity  0.00
+06:12:55  bulletspeed  20.00
+06:12:55  nr of projectilestates  5
+06:12:55  gravity  -7.00
+06:12:55  bulletspeed  0.00
+attachid 1 gunner
+06:13:00    LAV25
+06:13:00  m_attachedEntryId    1		 0x00000001 
+06:13:00  m_controlledEntryId  1		 0x00000001 
+06:13:00  nr of projectilestates  0
+06:13:00  gravity  -9.81
+06:13:00  bulletspeed  600.00
+attachid 2 side gunner right window back
+06:15:52  m_attachedEntryId    2		 0x00000002 
+06:15:52  m_controlledEntryId  2		 0x00000002 
+06:15:52  nr of projectilestates  0
+06:15:52  gravity  -9.81
+06:15:52  bulletspeed  610.00
+attachid 3 side gunner right window front
+06:15:53  m_attachedEntryId    3		 0x00000003 
+06:15:53  m_controlledEntryId  3		 0x00000003 
+06:15:53  nr of projectilestates  0
+06:15:53  gravity  -9.81
+06:15:53  bulletspeed  610.00
+attachid 4 side gunner left window back
+06:15:53  m_attachedEntryId    4		 0x00000004 
+06:15:53  m_controlledEntryId  4		 0x00000004 
+06:15:53  nr of projectilestates  0
+06:15:53  gravity  -9.81
+06:15:53  bulletspeed  610.00
+attachid 5 side gunner left window front
+06:15:54  m_attachedEntryId    5		 0x00000005 
+06:15:54  m_controlledEntryId  5		 0x00000005 
+06:15:54  nr of projectilestates  0
+06:15:54  gravity  -9.81
+06:15:54  bulletspeed  610.00
+
+BMP2
+06:40:28  nr of projectilestates  0
+06:40:28  gravity  0.00
+06:40:28  bulletspeed  20.00
+06:40:28  nr of projectilestates  1
+06:40:28  gravity  0.00
+06:40:28  bulletspeed  16.00
+06:40:28  nr of projectilestates  2
+06:40:28  gravity  -9.81
+06:40:28  bulletspeed  610.00
+06:40:28  nr of projectilestates  3
+06:40:28  gravity  -4.91
+06:40:28  bulletspeed  200.00
+06:40:28  nr of projectilestates  4
+06:40:28  gravity  -4.91
+06:40:28  bulletspeed  200.00
+06:40:28  nr of projectilestates  5
+06:40:28  gravity  -7.00
+06:40:28  bulletspeed  0.00
+attachid 1 gunner
+attachid 2 side gunner left window back
+attachid 3 side gunner right window front
+attachid 4 back gunner window back
+attachid 5 side gunner left or right window back
+06:40:29    BMP2
+06:40:29  m_attachedEntryId    1		 0x00000001 
+06:40:29  m_controlledEntryId  1		 0x00000001 
+06:40:29  nr of projectilestates  0
+06:40:29  gravity  -9.81
+06:40:29  bulletspeed  600.00
+6:40:30    BMP2
+06:40:30  m_attachedEntryId    2		 0x00000002 
+06:40:30  m_controlledEntryId  2		 0x00000002 
+06:40:30  nr of projectilestates  0
+06:40:30  gravity  -9.81
+06:40:30  bulletspeed  610.00
+06:40:30    BMP2
+06:40:30  m_attachedEntryId    3		 0x00000003 
+06:40:30  m_controlledEntryId  3		 0x00000003 
+06:40:30  nr of projectilestates  0
+06:40:30  gravity  -9.81
+06:40:30  bulletspeed  610.00
+6:40:31    BMP2
+06:40:31  m_attachedEntryId    4		 0x00000004 
+06:40:31  m_controlledEntryId  4		 0x00000004 
+06:40:31  nr of projectilestates  0
+06:40:31  gravity  -9.81
+06:40:31  bulletspeed  610.00
+06:40:32    BMP2
+06:40:32  m_attachedEntryId    5		 0x00000005 
+06:40:32  m_controlledEntryId  5		 0x00000005 
+06:40:32  nr of projectilestates  0
+06:40:32  gravity  -9.81
+06:40:32  bulletspeed  610.00
+
+
+
+06:16:58  Pantsir && CRAM
+06:16:58  nr of projectilestates  0
+06:16:58  gravity  0.00
+06:16:58  bulletspeed  900.00
+
+
+HumveeArmored & GAZ-3937_Vodnik
+attachid 1 gunner
+06:39:43    HumveeArmored
+06:39:43  m_attachedEntryId    1		 0x00000001 
+06:39:43  m_controlledEntryId  1		 0x00000001 
+06:39:43  nr of projectilestates  0
+06:39:43  gravity  -9.81
+06:39:43  bulletspeed  600.00
+attachid 2 passenger front
+06:39:44  m_attachedEntryId    2		 0x00000002 
+06:39:44  m_controlledEntryId  2		 0x00000002 
+attachid 3 right back seat 
+06:39:44  m_attachedEntryId    3		 0x00000003 
+06:39:44  m_controlledEntryId  3		 0x00000003 
+
+
+ AAV-7A1
+ driver
+11:46:31  nr of projectilestates  0
+11:46:31  gravity  -7.00
+11:46:31  bulletspeed  0.00
+11:46:31    AAV-7A1
+gunner
+11:46:33  m_attachedEntryId    1		 0x00000001 
+11:46:33  m_controlledEntryId  1		 0x00000001 
+11:46:33  nr of projectilestates  02
+11:46:33  gravity  -9.81
+11:46:33  bulletspeed  600.00
+11:46:33  nr of projectilestates  1
+11:46:33  gravity  -7.00
+11:46:33  bulletspeed  80.00
+11:46:35    AAV-7A1
+11:46:35  m_attachedEntryId    2		 0x00000002 
+11:46:35  m_controlledEntryId  2		 0x00000002 
+46:37    AAV-7A1
+11:46:37  m_attachedEntryId    3		 0x00000003 
+11:46:37  m_controlledEntryId  3		 0x00000003 
+11:46:38    AAV-7A1
+11:46:38  m_attachedEntryId    4		 0x00000004 
+11:46:38  m_controlledEntryId  4		 0x00000004 
+11:46:39    AAV-7A1
+11:46:39  m_attachedEntryId    5		 0x00000005 
+11:46:39  m_controlledEntryId  5		 0x00000005 
+
+
+
+RHIB
+driver none
+11:46:47    RHIB
+11:46:47  m_attachedEntryId    1		 0x00000001 
+11:46:47  m_controlledEntryId  1		 0x00000001 
+11:46:47  nr of projectilestates  0
+11:46:47  gravity  -15.00
+11:46:47  bulletspeed  600.00
+11:46:48    RHIB
+11:46:48  m_attachedEntryId    2		 0x00000002 
+11:46:49    RHIB
+11:46:49  m_attachedEntryId    3		 0x00000003 
+
+
+
+
+Kornet
+06:40:51    Kornet
+06:40:51  nr of projectilestates  0
+06:40:51  gravity  0.00
+06:40:51  bulletspeed  20.00
+
+ 
+TOW2
+06:40:51  nr of projectilestates  0
+06:40:51  gravity  0.00
+06:40:51  bulletspeed  20.00
+
+
+AHZ1 Pilot
+
+20:20:21    AH1Z
+20:20:21   stance    0	iStance	 0x00000000 
+20:20:21  nr of weaponstates  0
+20:20:21  gravity  0.00
+20:20:21  bulletspeed  300.00
+20:20:21   stance    0	iStance	 0x00000000 
+20:20:21  nr of weaponstates  1
+20:20:21  gravity  0.00
+20:20:21  bulletspeed  300.00
+20:20:21   stance    0	iStance	 0x00000000 
+20:20:21  nr of weaponstates  2
+20:20:21  gravity  0.00
+20:20:21  bulletspeed  50.00
+20:20:21   stance    0	iStance	 0x00000000 
+20:20:21  nr of weaponstates  3
+20:20:21  gravity  0.00
+20:20:21  bulletspeed  50.00
+20:20:21   stance    0	iStance	 0x00000000 
+20:20:21  nr of weaponstates  4
+20:20:21  gravity  0.00
+20:20:21  bulletspeed  350.00
+20:20:21   stance    0	iStance	 0x00000000 
+20:20:21  nr of weaponstates  5
+20:20:21  gravity  0.00
+20:20:21  bulletspeed  8.00
+20:20:21   stance    0	iStance	 0x00000000 
+20:20:21  nr of weaponstates  6
+20:20:21  gravity  0.00
+20:20:21  bulletspeed  8.00
+20:20:21   stance    0	iStance	 0x00000000 
+20:20:21  nr of weaponstates  7
+20:20:21  gravity  -7.00
+20:20:21  bulletspeed  0.10
+20:20:21   stance    0	iStance	 0x00000000 
+20:20:21  nr of weaponstates  8
+20:20:21  gravity  -7.00
+20:20:21  bulletspeed  0.10
+20:20:24    AH1Z
+20:20:24   stance    1	iStance	 0x00000001 
+20:20:24  nr of weaponstates  0
+20:20:24  gravity  0.00
+20:20:24  bulletspeed  300.00
+20:20:24   stance    1	iStance	 0x00000001 
+20:20:24  nr of weaponstates  1
+20:20:24  gravity  0.00
+20:20:24  bulletspeed  300.00
+20:20:24   stance    1	iStance	 0x00000001 
+20:20:24  nr of weaponstates  2
+20:20:24  gravity  0.00
+20:20:24  bulletspeed  50.00
+20:20:24   stance    1	iStance	 0x00000001 
+20:20:24  nr of weaponstates  3
+20:20:24  gravity  0.00
+20:20:24  bulletspeed  50.00
+20:20:24   stance    1	iStance	 0x00000001 
+20:20:24  nr of weaponstates  4
+20:20:24  gravity  0.00
+20:20:24  bulletspeed  350.00
+20:20:24   stance    1	iStance	 0x00000001 
+20:20:24  nr of weaponstates  5
+20:20:24  gravity  0.00
+20:20:24  bulletspeed  8.00
+20:20:24   stance    1	iStance	 0x00000001 
+20:20:24  nr of weaponstates  6
+20:20:24  gravity  0.00
+20:20:24  bulletspeed  8.00
+20:20:24   stance    1	iStance	 0x00000001 
+20:20:24  nr of weaponstates  7
+20:20:24  gravity  -7.00
+20:20:24  bulletspeed  0.10
+20:20:24   stance    1	iStance	 0x00000001 
+20:20:24  nr of weaponstates  8
+20:20:24  gravity  -7.00
+20:20:24  bulletspeed  0.10
+
+AHZ1 gunner
+20:23:08  m_attachedEntryId    1		 0x00000001 
+20:23:08  m_controlledEntryId  1		 0x00000001 
+20:23:08   stance    0	iStance	 0x00000000 
+20:23:08  nr of weaponstates  0
+20:23:08  gravity  0.00
+20:23:08  bulletspeed  90.00
+20:23:08   stance    0	iStance	 0x00000000 
+20:23:08  nr of weaponstates  1
+20:23:08  gravity  0.00
+20:23:08  bulletspeed  600.00
+20:23:08   stance    0	iStance	 0x00000000 
+20:23:08  nr of weaponstates  2
+20:23:08  gravity  0.00
+20:23:08  bulletspeed  1.00
+20:23:08   stance    0	iStance	 0x00000000 
+20:23:08  nr of weaponstates  3
+20:23:08  gravity  0.00
+20:23:08  bulletspeed  1.00
+20:23:08   stance    0	iStance	 0x00000000 
+20:23:08  nr of weaponstates  4
+20:23:08  gravity  0.00
+20:23:08  bulletspeed  16.00
+20:23:08    AH1Z
+
+Mi28 Pilot
+20:24:20    Mi28
+20:24:20   stance    0	iStance	 0x00000000 
+20:24:20  nr of weaponstates  0
+20:24:20  gravity  0.00
+20:24:20  bulletspeed  300.00
+20:24:20   stance    0	iStance	 0x00000000 
+20:24:20  nr of weaponstates  1
+20:24:20  gravity  0.00
+20:24:20  bulletspeed  300.00
+20:24:20   stance    0	iStance	 0x00000000 
+20:24:20  nr of weaponstates  2
+20:24:20  gravity  0.00
+20:24:20  bulletspeed  50.00
+20:24:20   stance    0	iStance	 0x00000000 
+20:24:20  nr of weaponstates  3
+20:24:20  gravity  0.00
+20:24:20  bulletspeed  50.00
+20:24:20   stance    0	iStance	 0x00000000 
+20:24:20  nr of weaponstates  4
+20:24:20  gravity  0.00
+20:24:20  bulletspeed  350.00
+20:24:20   stance    0	iStance	 0x00000000 
+20:24:20  nr of weaponstates  5
+20:24:20  gravity  0.00
+20:24:20  bulletspeed  8.00
+20:24:20   stance    0	iStance	 0x00000000 
+20:24:20  nr of weaponstates  6
+20:24:20  gravity  0.00
+20:24:20  bulletspeed  8.00
+20:24:20   stance    0	iStance	 0x00000000 
+20:24:20  nr of weaponstates  7
+20:24:20  gravity  -7.00
+20:24:20  bulletspeed  0.10
+20:24:20   stance    0	iStance	 0x00000000 
+20:24:20  nr of weaponstates  8
+20:24:20  gravity  -7.00
+20:24:20  bulletspeed  0.10
+20:24:22    Mi28
+20:24:22   stance    1	iStance	 0x00000001 
+20:24:22  nr of weaponstates  0
+20:24:22  gravity  0.00
+20:24:22  bulletspeed  300.00
+20:24:22   stance    1	iStance	 0x00000001 
+20:24:22  nr of weaponstates  1
+20:24:22  gravity  0.00
+20:24:22  bulletspeed  300.00
+20:24:22   stance    1	iStance	 0x00000001 
+20:24:22  nr of weaponstates  2
+20:24:22  gravity  0.00
+20:24:22  bulletspeed  50.00
+20:24:22   stance    1	iStance	 0x00000001 
+20:24:22  nr of weaponstates  3
+20:24:22  gravity  0.00
+20:24:22  bulletspeed  50.00
+20:24:22   stance    1	iStance	 0x00000001 
+20:24:22  nr of weaponstates  4
+20:24:22  gravity  0.00
+20:24:22  bulletspeed  350.00
+20:24:22   stance    1	iStance	 0x00000001 
+20:24:22  nr of weaponstates  5
+20:24:22  gravity  0.00
+20:24:22  bulletspeed  8.00
+20:24:22   stance    1	iStance	 0x00000001 
+20:24:22  nr of weaponstates  6
+20:24:22  gravity  0.00
+20:24:22  bulletspeed  8.00
+20:24:22   stance    1	iStance	 0x00000001 
+20:24:22  nr of weaponstates  7
+20:24:22  gravity  -7.00
+20:24:22  bulletspeed  0.10
+20:24:22   stance    1	iStance	 0x00000001 
+20:24:22  nr of weaponstates  8
+20:24:22  gravity  -7.00
+20:24:22  bulletspeed  0.10
+
+Gunner
+
+20:25:31  Mi28
+20:25:31  m_attachedEntryId    1		 0x00000001 
+20:25:31  m_controlledEntryId  1		 0x00000001 
+20:25:31   stance    0	iStance	 0x00000000 
+20:25:31  nr of weaponstates  0
+20:25:31  gravity  0.00
+20:25:31  bulletspeed  90.00
+20:25:31   stance    0	iStance	 0x00000000 
+20:25:31  nr of weaponstates  1
+20:25:31  gravity  0.00
+20:25:31  bulletspeed  600.00
+20:25:31   stance    0	iStance	 0x00000000 
+20:25:31  nr of weaponstates  2
+20:25:31  gravity  0.00
+20:25:31  bulletspeed  1.00
+20:25:31   stance    0	iStance	 0x00000000 
+20:25:31  nr of weaponstates  3
+20:25:31  gravity  0.00
+20:25:31  bulletspeed  1.00
+20:25:31   stance    0	iStance	 0x00000000 
+20:25:31  nr of weaponstates  4
+20:25:31  gravity  0.00
+20:25:31  bulletspeed  16.00

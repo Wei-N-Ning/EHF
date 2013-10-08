@@ -45,6 +45,7 @@ class BaseReader(object):
         @param buf: string buffer object, ctypes.create_string_buffer()
         """
         if not kernel32.ReadProcessMemory(self.hProcess, address, byref(buf), length, None):
-            raise ReadProcessMemoryError, "Can not read memory from process [%d], address [%x], length [%d]" % (self.hProcess, address, length)
+            logger.error("Last Error Code: %s" % kernel32.GetLastError())
+            raise ReadProcessMemoryError, "Can not read memory from process [%s], address [%s], length [%s]" % (self.hProcess, address, length)
         else:
-            logger.debug(" + Dumpped memory from process [%d], address [%x], length[%d]" % (self.hProcess, address, length))
+            logger.debug(" + Dumpped memory from process [%s], address [%s], length[%s]" % (self.hProcess, address, length))

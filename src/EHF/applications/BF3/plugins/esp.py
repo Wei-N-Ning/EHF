@@ -1,4 +1,3 @@
-import math
 
 from EHF.libs import ehfgraphics
 from EHF.plugins import base
@@ -7,6 +6,22 @@ from EHF.libs import ehfmaths
 from EHF.libs.ehfmaths import functions as ehfmaths_functions
 from EHF.libs.ehfui import widgets
 
+#it is bad....
+SPEED = 200.0
+GRAVITY = 9.81
+
+
+def naiveGetBulletDrop(distance, deltaY, gravity, velocity):
+    try:
+        sinAimA = deltaY/distance
+    except:
+        return 0.0
+    # this is wrong
+    bulletTravelTime = distance/SPEED
+    # this is inaccurate, it does not account for the change of sinAimA which affects the 
+    # vertical bullet speed
+    bulletTravelDistanceY = SPEED * sinAimA * bulletTravelTime - GRAVITY/2.0 * bulletTravelTime**2
+    return deltaY - bulletTravelDistanceY
 
 class EspPlugin(base.BasePerFrameDrawingPlugin):
     """
@@ -36,6 +51,7 @@ class EspPlugin(base.BasePerFrameDrawingPlugin):
         # delayed init
         self.delayedInit()
         
+        # figure out the time interval
         worldTransform = ehfmaths_functions.getIdMatrix()
         viewTransform = ehfmaths_functions.getViewMatrix(
                                                          self.appVars["upVec"], 
@@ -97,15 +113,9 @@ class EspPlugin(base.BasePerFrameDrawingPlugin):
             _posVP = _posV.multToMat(projectionTransform)
             _posV.x *= -1
             
-            # get bullet drop
-            try:
-                sinAimA = deltaY/distant
-            except:
-                continue
-            #TODO: expose this parameter
-            bulletTravelTime = distant/200.0
-            bulletTravelDistanceY = 200.0 * sinAimA * bulletTravelTime - 9.810/2.0 * bulletTravelTime**2
-            aimCompensationY = deltaY - bulletTravelDistanceY
+            # ----------------get bullet drop
+            aimCompensationY = naiveGetBulletDrop(distant, deltaY, GRAVITY, SPEED)
+            # ----------------done getting bullet drop
             
             pos4TankAimAssist.y += aimCompensationY 
             posVTankAimAssist = pos4TankAimAssist.multToMat(worldTransform).multToMat(viewTransform)
