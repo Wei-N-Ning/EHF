@@ -189,6 +189,7 @@ class D3DApplication(application.BaseApplication):
                             window thread:     create window, show window, pump message 
         
         """
+
         # --------pre-execution--------
         self._preExecution()
         

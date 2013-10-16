@@ -99,8 +99,7 @@ def rpmf(parser, prmVar, format=8):
     parser._rpmFCache = __rpmFCache
     parser._rpmFCacheAssigned = __rpmFCacheAssigned
     print ''.join(_printable)
-    
-    
+
 def rpm(parser, prmVar, format=8):
     """
     fixed 1024 bytes dump...

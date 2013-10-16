@@ -34,7 +34,8 @@ class ConsoleApplication(application.BaseApplication):
         self._initAppInfo()
         self._initEnvInfo()
         self._initProcess()
-    
+        self._overrideAppInfo()
+        
     def _initProcess(self):
         self._attributes["ProcessHelper"].findWindowByClass(self._attributes["AppInfo"].targetAppWindowClass)
         if not (self._attributes["ProcessHelper"].pid and\
@@ -68,7 +69,13 @@ class ConsoleApplication(application.BaseApplication):
         to be implemented per-application or leave it as default
         """
         pass
-
+    
+    def _overrideAppInfo(self):
+        """
+        to be implemented by sub-classes to patch the attribute dictionary... bad
+        """
+        pass
+    
     def _dataPass(self):
         """
         the execution of all the data-related per-frame functions, 

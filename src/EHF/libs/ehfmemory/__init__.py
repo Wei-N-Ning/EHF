@@ -3,6 +3,10 @@ from ctypes import byref
 from ctypes import windll
 
 from ctypes import POINTER
+
+from ctypes import c_uint
+from ctypes import c_ulonglong
+
 kernel32 = windll.kernel32
 
 import logging
@@ -35,8 +39,9 @@ class BaseReader(object):
     this process handle is possessed by the process helper.
     """
     
-    def __init__(self, hProcess):
+    def __init__(self, hProcess, is64Bit=False):
         self.hProcess = hProcess
+        self.dataTypeConv = c_ulonglong if is64Bit else c_uint
         
     def _rpm(self, address, buf, length):
         """
@@ -44,8 +49,8 @@ class BaseReader(object):
         @param address: starting address
         @param buf: string buffer object, ctypes.create_string_buffer()
         """
-        if not kernel32.ReadProcessMemory(self.hProcess, address, byref(buf), length, None):
+        if not kernel32.ReadProcessMemory(self.hProcess, self.dataTypeConv(address), byref(buf), length, None):
             logger.error("Last Error Code: %s" % kernel32.GetLastError())
-            raise ReadProcessMemoryError, "Can not read memory from process [%s], address [%s], length [%s]" % (self.hProcess, address, length)
+            raise ReadProcessMemoryError, "Can not read memory from process [0x%X], address [0x%X], length [0x%X]" % (self.hProcess, address, length)
         else:
-            logger.debug(" + Dumpped memory from process [%s], address [%s], length[%s]" % (self.hProcess, address, length))
+            logger.debug(" + Dumpped memory from process [0x%X], address [0x%X], length[0x%X]" % (self.hProcess, address, length))

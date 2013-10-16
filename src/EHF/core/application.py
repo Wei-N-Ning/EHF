@@ -40,6 +40,10 @@ class BaseApplication(object):
     # if just for debug purpose, it's recommended to use the --debug or --dryRun flag!!
     isPrototypeApplication = False
     
+    # override this class variable if needed, by default all the applications are running on
+    # 32 bit platform
+    bitcount = 32
+    
     def __init__(self, debug=False, dryRun=False):
         """
         Application share the data with its own plugins via the _attributes.

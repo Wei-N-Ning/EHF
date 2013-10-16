@@ -78,4 +78,4 @@ class CmdParser(object):
         try:
             exec(cmdString)
         except Exception, e:
-            logger.error("Failed to execute user command. Reason: %s" % e)
+            logger.exception("Failed to execute user command. Reason: %s" % e)

@@ -178,6 +178,7 @@ class WindowFrame(object):
             None)
         
         if not hwnd:
+            logger.error("Last Error Code: %s" % kernel32.GetLastError())
             raise D3DWindowFrameError, "Failed to create hwnd!!"
         else:
             logger.debug("+ Successfully created hwnd: %s" % hwnd)

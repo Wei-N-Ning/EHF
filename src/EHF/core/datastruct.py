@@ -59,10 +59,10 @@ class WNDCLASS(Structure):
                 ('lpfnWndProc', WNDPROC),
                 ('cbClsExtra', c_int),
                 ('cbWndExtra', c_int),
-                ('hInstance', c_int),
-                ('hIcon', c_int),
-                ('hCursor', c_int),
-                ('hbrBackground', c_int),
+                ('hInstance', c_longlong),
+                ('hIcon', c_longlong),
+                ('hCursor', c_longlong),
+                ('hbrBackground', c_longlong),
                 ('lpszMenuName', c_char_p),
                 ('lpszClassName', c_char_p)]
     

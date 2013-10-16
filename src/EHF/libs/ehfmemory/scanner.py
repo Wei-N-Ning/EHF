@@ -1,7 +1,7 @@
 from EHF.libs import ehfmemory
 from EHF.libs import ehfmodule
 
-from ctypes import create_string_buffer, c_int, sizeof
+from ctypes import create_string_buffer, c_int, sizeof, c_uint, c_ulonglong
 
 
 class MemoryScannerError(Exception):
@@ -27,12 +27,15 @@ class MemoryScanner(ehfmemory.BaseReader):
     def __init__(self, hProcess, 
                        memoryStart=0x0, 
                        memorySize=0x0,
-                       patternFinderRepoClass=""):
+                       patternFinderRepoClass="",
+                       is64Bit=False):
         self.hProcess = hProcess
+        self.dataTypeConv = c_ulonglong if is64Bit else c_uint
         self.rawDump = create_string_buffer(memorySize)
         self.memoryStart = memoryStart
         self.memorySize = memorySize
         self.values = {}
+        self.bases = {}
         
         # get the pattern finder repository class
         className = patternFinderRepoClass.split('.')[-1]
@@ -53,6 +56,7 @@ class MemoryScanner(ehfmemory.BaseReader):
             pf.run()
             
             self.values[pf.label] = pf.values[0]
+            self.bases[pf.label] = pf.bases[0]
             
             # [IMPORTANT]: the "addressExtension" mechanism on the patternfinder has been refactored into a new class:
             # PatternFinderFollower

@@ -6,11 +6,13 @@ python launch.py -h/--help for complete description
 
 import sys
 import optparse
+import traceback
+
+from EHF.libs.ehfenv import platforminfo
 
 import logging
 logger = logging.getLogger(__name__)
 logging.basicConfig()
-
 logging.root.setLevel(logging.INFO)
 
 
@@ -29,6 +31,14 @@ def main():
     logger.info(appModule.__name__)
     appInstance = appModule.getApp(appName=appName, debug=isDebug, dryRun=isDryRun)
     
+    requiredAppBitcount = getattr(appInstance, "bitcount", 32)
+    platformBitcount = platforminfo.getPlatformBitcount()
+    if platformBitcount == -1:
+        logger.error("Can not recognize platform bitcount!")
+        sys.exit(1)
+    if platformBitcount != requiredAppBitcount:
+        logger.error("Application (%s bit) can not run on %s bit platform!" % (requiredAppBitcount, platformBitcount))
+        sys.exit(1)
     try:
         appInstance.execute()
     except KeyboardInterrupt:
@@ -37,7 +47,8 @@ def main():
         appInstance.release()
         sys.exit(0)
     except Exception, e:
-        logger.error("An error occurred during execution! Reason: %s" % e)
+        
+        logger.exception("An error occurred during execution! Reason: %s" % e)
         sys.exit(1)
 
 

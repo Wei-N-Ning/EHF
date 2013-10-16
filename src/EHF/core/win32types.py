@@ -3,6 +3,7 @@ from ctypes import c_short, c_ushort
 from ctypes import c_byte, c_ubyte
 from ctypes import c_char, c_wchar, c_char_p, c_wchar_p
 from ctypes import c_long, c_ulong
+from ctypes import c_longlong, c_ulonglong
 from ctypes import c_float, c_double
 from ctypes import cast, pointer, POINTER
 from ctypes import c_void_p

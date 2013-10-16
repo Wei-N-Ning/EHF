@@ -59,6 +59,7 @@ class PatternFinder(object):
                  valueOffsets=[], 
                  addressExpected=0x0,
                  allowMultiFinds=False,
+                 offsetStarting=0x0
                 ):
         """
         @param label: used for internal indexing (particularly for appInfo.primaryVars)
@@ -106,7 +107,14 @@ class PatternFinder(object):
         
         # value offsets: [(offset, datatype), (offset, datatype)... ...  ]
         self.valueOffsets = valueOffsets
+        
+        # values is a list of the starting addresses of the masked sequence (the 00 00 00... part)
+        # bases is a list of the starting addresses of the pattern (the whole string FF FF ....)
+        # this is to assume the "allowMultiFinds" will never be true...
         self.values = []
+        self.bases = []
+        self.offsetStarting = offsetStarting
+        
         self.addressExpected = addressExpected
         
         self.scanner = None
@@ -162,7 +170,7 @@ class PatternFinder(object):
                 data = datatype()
                 self.scanner._rpm(eachFound+offset, data, datasize)
                 self.values.append(data.value)
-    
+                self.bases.append(eachFound+self.offsetStarting)
 
 
 class PatternFinderFollower(object):
@@ -195,15 +203,27 @@ class PatternFinderFollower(object):
         self.isPointer = isPointer
         self.valueOffsets = valueOffsets
         self.values = []
-        
+        self.bases = []
+
     def registerScanner(self, memoryScanner):
         self.scanner = memoryScanner
 
     def run(self):
-        baseVar = self.scanner.values[self.baseVariableName]
-        newVar = baseVar+self.valueOffsets[0]
+        """
+        one important change on the scanner, the ipv (primary variable) are not separated to
+        values and bases
+        
+        the actual addres is value + base, both indexed by the label
+         
+        this will be refactored in the future!
+        """
+        baseVar = self.scanner.values[self.baseVariableName] + self.scanner.bases[self.baseVariableName]
+        addressOffset, dataType, dataSize = self.valueOffsets
+        newVar = baseVar+addressOffset
         if self.isPointer:
-            _value = win32types.DWORD()
-            self.scanner._rpm(newVar, _value, ctypes.sizeof(win32types.DWORD))
+            _value = dataType() if dataType != None else win32types.DWORD()
+            _size = dataSize if dataSize != None else ctypes.sizeof(win32types.DWORD)
+            self.scanner._rpm(newVar, _value, _size)
             newVar = _value.value
         self.values = [ newVar, ]
+        self.bases = [ 0x0, ]
