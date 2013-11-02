@@ -54,9 +54,12 @@ def logm(parser, address):
     mr._rpm(address, mat, 64)
     data = [entry for entry in mat.arr]
     saveOrAppendData(data)
-    
+
 def rpmf(parser, prmVar, format=8):
     """
+    the size of each segment is 0x8 bytes
+    the size of each line is 0x20 bytes 
+    
     fixed 1024 bytes dump...
     """
     __rpmFCache = getattr(parser, "_rpmFCache", [0.0]*256)
