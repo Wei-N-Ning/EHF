@@ -27,27 +27,34 @@ class BF4AppInfoSerializationPlugin(base.BasePreExecutionPlugin):
         primaryVariables = appInfo.primaryVars.copy()
         
         # app
-        data["applicationName"] = appInfo.targetAppName
+        data["applicationName"] = (appInfo.targetAppName, "str")
+        data["pid"] = (self._appAttr["ProcessHelper"].pid, "int")
+        data["hProcess"] = (self._appAttr["ProcessHelper"].hProcess, "int")
         
         # window
-        data["windowLeft"] = appInfo.bboxLeft
-        data["windowRight"] = appInfo.bboxRight
-        data["windowTop"] = appInfo.bboxTop
-        data["windowBottom"] = appInfo.bboxBottom
-        data["windowResolutionX"] = appInfo.resolutionX
-        data["windowResolutionY"] = appInfo.resolutionY
-        data["windowCenterX"] = appInfo.centerX
-        data["windowCenterY"] = appInfo.centerY
-        data["windowOriginX"] = appInfo.originX
-        data["windowOriginY"] = appInfo.originY
-        data["windowClass"] = appInfo.targetAppWindowClass
+        data["windowLeft"] = (appInfo.bboxLeft, "int")
+        data["windowRight"] = (appInfo.bboxRight, "int")
+        data["windowTop"] = (appInfo.bboxTop, "int")
+        data["windowBottom"] = (appInfo.bboxBottom, "int")
+        data["windowResolutionX"] = (appInfo.resolutionX, "int")
+        data["windowResolutionY"] = (appInfo.resolutionY, "int")
+        data["windowCenterX"] = (appInfo.centerX, "int")
+        data["windowCenterY"] = (appInfo.centerY, "int")
+        data["windowOriginX"] = (appInfo.originX, "int")
+        data["windowOriginY"] = (appInfo.originY, "int")
+        data["windowClass"] = (appInfo.targetAppWindowClass, "str")
         
-        self.parser.add_section("data")
-        for key, value in data.iteritems():
-            self.parser.set("data", key, value)
-        self.parser.add_section("primary")
+        for name, contents in data.iteritems():
+            self.parser.add_section(name)
+            varValue, varType = contents
+            self.parser.set(name, "value", varValue)
+            self.parser.set(name, "type", varType)
+        
         for key, value in primaryVariables.iteritems():
-            self.parser.set("primary", key, value)
+            self.parser.add_section(key)
+            self.parser.set(key, "value", "0x%X"%value)
+            self.parser.set(key, "type", "hexstr")
+            
         with open(self.DUMP_FILE_PATH, 'w') as fp:
             self.parser.write(fp)
         logger.info("+ Saved data to %s" % self.DUMP_FILE_PATH)

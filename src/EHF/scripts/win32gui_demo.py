@@ -77,12 +77,15 @@ def onPaint(hwnd, msg, wp, lp):
  
     win32gui.EndPaint(hwnd, ps)
     return 0
-wndproc={win32con.WM_PAINT:onPaint}
+
+wndproc={
+         win32con.WM_PAINT:onPaint,
+        }
 
 def run():
     wc = win32gui.WNDCLASS()
     wc.lpszClassName = 'test_win32gui_2'
-    wc.style = win32con.CS_GLOBALCLASS|win32con.CS_VREDRAW | win32con.CS_HREDRAW
+    wc.style = 0;win32con.CS_GLOBALCLASS|win32con.CS_VREDRAW | win32con.CS_HREDRAW
     wc.hbrBackground = win32con.COLOR_WINDOW+1
     wc.lpfnWndProc = wndproc
     class_atom=win32gui.RegisterClass(wc)       
@@ -100,8 +103,8 @@ def run():
                                    0, 
                                    None
                                   )
-    s=win32gui.GetWindowLong(hwnd,win32con.GWL_EXSTYLE)
-    win32gui.SetWindowLong(hwnd, win32con.GWL_EXSTYLE, s|win32con.WS_EX_LAYERED)
+#    s=win32gui.GetWindowLong(hwnd,win32con.GWL_EXSTYLE)
+#    win32gui.SetWindowLong(hwnd, win32con.GWL_EXSTYLE, s|win32con.WS_EX_LAYERED)
     win32gui.SetLayeredWindowAttributes(hwnd, win32api.RGB(255, 255, 255), 255, win32con.LWA_COLORKEY)
     sleepTime = 1.0/60.0
     global tick

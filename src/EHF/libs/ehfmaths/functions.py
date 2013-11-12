@@ -69,7 +69,7 @@ def getProjectionMatrix(nz, fz, fovH, fovV):
     mat.setM(1, 1, h)
     mat.setM(2, 2, q)
     mat.setM(3, 2, -1*q*nz)
-    mat.setM(2, 3, 1.0)
+    mat.setM(2, 3, -1.0)
     return mat
 
 

@@ -65,17 +65,6 @@ class PatternFinderRepo(object):
                 addressExpected= 0x0,
                 offsetStarting = 0x1D
                 ),
-#            patternfinder.PatternFinder(
-#                label          = "ptrGameMain",
-#                # the 2nd reference from main, based on 20131001 dump
-#                patternExpected= "48 89 9C 24 B0 01 00 00 48 8B 05 21 95 0D 02 48 33 C4 48 89 45 50 4C 8B F2 48 8B F9 48 89 0D C5 6C 11 02",
-#                patternMask    = "FF FF FF FF FF FF FF FF FF FF FF 00 00 00 00 FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 00 00 00 00",
-#                               #  1  2  3  4  5  6  7  8  9  A  B  C  D  E  F  10 11 12 13 14 15 16 17 18 19 1A 1B 1C 1D 1E 1F 20 21 22 23 24 25 26 27 28 29 2A
-#                patternMatch   = "FF",
-#                valueOffsets   = [ ( 0x1F, win32types.c_uint, win32types.sizeof(win32types.c_uint) ) ],
-#                addressExpected= 0x0,
-#                offsetStarting = 0x23
-#                ),
             patternfinder.PatternFinder(
                 label          = "GameRendererPtrAddress",
                 # the 5th reference from game renderer, based on 20131031 retail dump
@@ -129,11 +118,18 @@ class PatternFinderRepo(object):
             
             # aspect ratio: 0xC4
             # fovY: 0xB4
+            # fovX: 0x250???
             patternfinder.PatternFinderFollower(
                 label = "LocalPlayerAddress",
                 baseVariableName = "PlayerManagerAddress",
                 isPointer = True,
                 valueOffsets = [0x2A0, win32types.c_ulonglong, win32types.sizeof(win32types.c_ulonglong)]
+                ),
+            patternfinder.PatternFinderFollower(
+                label = "PlayerPtrArrayAddress",
+                baseVariableName = "PlayerManagerAddress",
+                isPointer = True,
+                valueOffsets = [0x2A8, win32types.c_ulonglong, win32types.sizeof(win32types.c_ulonglong)]
                 ),
            ]
 
