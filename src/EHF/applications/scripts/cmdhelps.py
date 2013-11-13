@@ -143,6 +143,28 @@ def rpm(parser, prmVar, format=8):
     print ''.join(_printable)
 
 
+def printh(value, label=''):
+    print label + "0x%X" % value
+
+
+def vel(parser):
+    """
+    A bf4 helper function to inspect the vehicle data block from the local player
+    """
+    application = parser.application
+    appInfo = parser.appInfo
+    mr = application._attributes["MemoryReader"]
+    localPlayerAddress = appInfo.primaryVars["LocalPlayerAddress"]
+    int64 = ctypes.c_ulonglong()
+    mr._rpm(localPlayerAddress+0xDB0, int64, 8)
+    vehicleDataBlock = int64.value
+    printh(vehicleDataBlock, "VehicleDataBlock: ")
+    mr._rpm(vehicleDataBlock+0x238, int64, 8)
+    vehEntity = int64.value
+    printh(vehEntity, "VehicleEntity: ")
+    rpmf(parser, "0x%X" % (vehEntity+0x200))
+    
+    
 def findmx(parser, prmVar):
     pass
 
