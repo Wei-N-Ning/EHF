@@ -11,8 +11,8 @@ class BF4AppInfo(entity.AppInfo):
         self.isProfiling = False
         self.targetAppName = "Battlefield 4"
         self.targetAppWindowClass = "Battlefield 4"
-        self.targetMemStart = 0x140001000#win32types.c_ulonglong(0x140001000)
-        self.targetMemSize =  0x001900000#win32types.c_ulonglong(0x001900000)
+        self.targetMemStart = 0x140001000
+        self.targetMemSize =  0x001900000
         
         self.vars = {}
 
@@ -23,13 +23,13 @@ class TestAppInfo(entity.AppInfo):
         self.isProfiling = False
         self.targetAppName = "notepad"
         self.targetAppWindowClass = "Notepad"
-        self.targetMemStart = 0x140001000#win32types.c_ulonglong(0x140001000)
-        self.targetMemSize =  0x001900000#win32types.c_ulonglong(0x001900000)
+        self.targetMemStart = 0x140001000
+        self.targetMemSize =  0x001900000
 
 
 class BF4EnvInfo(entity.EnvInfo):
     def override(self):
-        self.crossHairStyle = 0 # +
+        self.crossHairStyle = 0
         self.crossHairSize = 8
         self.crossHairLineWidth = 2
 

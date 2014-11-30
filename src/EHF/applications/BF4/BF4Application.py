@@ -1,11 +1,7 @@
 from EHF.applications import consoleapplication
-from EHF.applications import d3dapplication
 from EHF.applications.BF4 import config
 
 from EHF.libs.ehfmemory import reader
-
-import logging
-logger = logging.getLogger(__name__)
 
 
 class BF4ConsoleApplication(consoleapplication.ConsoleApplication):

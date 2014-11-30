@@ -23,9 +23,9 @@ def getApp(appName, debug, dryRun):
     """
     import BF4Application
     if appName == "BF4":
-        return BF4Application.BF4Application(debug=debug, dryRun=dryRun)
+        raise NotImplementedError()
     elif appName == "BF4Console":
         return BF4Application.BF4ConsoleApplication(debug=debug, dryRun=dryRun)
     else:
-        logger.error("Unrecognized application name, valid choices are: BF4, BF4Console")
+        logger.error("Unrecognized application name, valid choices are: BF4Console")
         return None
